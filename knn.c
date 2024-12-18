@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main(int argc, char * argv[]){
 
@@ -22,6 +23,7 @@ printf("[%d,%d,%d,%d,%d]\n", objects[i][0],objects[i][1],objects[i][2],objects[i
 
 int point[5];
 
+int distances[5];
 
 printf("%d\n", argc);
 printf("%s\n", argv[1]);
@@ -33,6 +35,15 @@ point[i]=atoi(argv[i+1]);
 printf("%d\n",point[i]);
 }
 
+
+for(int i=0;i<5;i++){
+for(int j=0;i<5;i++){
+distances[i]=(objects[i][j]-point[j])*(objects[i][j]-point[j]);
+}}
+for(int i=0;i<5;i++){
+distances[i]=sqrt(distances[i]);
+printf("%d;%d;%d;%d;%d\n",distances[0],distances[1],distances[2],distances[3],distances[4]);
+}
 
 return 0;
 }
